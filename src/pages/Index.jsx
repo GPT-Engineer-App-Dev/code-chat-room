@@ -1,7 +1,9 @@
 import { Box, Container, VStack, Heading, Text, Flex, Spacer, Button, HStack, IconButton } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { FaHome, FaUserCircle, FaCommentDots } from "react-icons/fa";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <Container maxW="container.xl" p={4}>
       {/* Navigation Bar */}
@@ -12,6 +14,7 @@ const Index = () => {
           <IconButton aria-label="Home" icon={<FaHome />} />
           <IconButton aria-label="Profile" icon={<FaUserCircle />} />
           <IconButton aria-label="Register" icon={<FaUserCircle />} onClick={() => navigate('/register')} />
+        <IconButton aria-label="Create Post" icon={<FaCommentDots />} onClick={() => navigate('/create-post')} />
         </HStack>
       </Flex>
 
