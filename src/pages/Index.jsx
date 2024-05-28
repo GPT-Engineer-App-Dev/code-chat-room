@@ -11,7 +11,7 @@ const Index = () => {
         <HStack spacing={4}>
           <IconButton aria-label="Home" icon={<FaHome />} />
           <IconButton aria-label="Profile" icon={<FaUserCircle />} />
-          <Button colorScheme="teal" variant="outline">Login</Button>
+          <IconButton aria-label="Register" icon={<FaUserCircle />} onClick={() => navigate('/register')} />
         </HStack>
       </Flex>
 
